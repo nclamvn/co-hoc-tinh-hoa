@@ -228,18 +228,22 @@ export default function DayCard({ dayInfo, size = 'large', showDetails = true })
             0 10px 30px rgba(0, 0, 0, 0.3),
             inset 0 0 20px rgba(139, 69, 19, 0.1);
           font-family: 'Playfair Display', serif;
+          max-width: 100%;
         }
 
         .day-card.large {
           width: 320px;
+          max-width: 100%;
         }
 
         .day-card.medium {
           width: 280px;
+          max-width: 100%;
         }
 
         .day-card.small {
           width: 200px;
+          max-width: 100%;
         }
 
         .border-top {

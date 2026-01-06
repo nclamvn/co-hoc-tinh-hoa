@@ -258,6 +258,7 @@ export default function LunarCalendarPage() {
           max-width: 1200px;
           margin: 0 auto;
           padding: 6rem 1rem 2rem;
+          overflow-x: hidden;
         }
 
         .page-header {
@@ -285,22 +286,27 @@ export default function LunarCalendarPage() {
 
         .page-content {
           display: flex;
-          gap: 2rem;
+          gap: 1.5rem;
+          width: 100%;
+          max-width: 100%;
         }
 
         .main-column {
           flex: 1;
+          min-width: 0;
           display: flex;
           flex-direction: column;
           gap: 1.5rem;
         }
 
         .side-column {
-          width: 350px;
-          flex-shrink: 0;
+          width: 340px;
+          max-width: 340px;
+          flex-shrink: 1;
           display: flex;
           flex-direction: column;
           gap: 1.5rem;
+          overflow: hidden;
         }
 
         .calendar-section {
@@ -310,6 +316,7 @@ export default function LunarCalendarPage() {
         .day-card-section {
           display: flex;
           justify-content: center;
+          overflow: hidden;
         }
 
         .section-title {
@@ -479,13 +486,21 @@ export default function LunarCalendarPage() {
           font-weight: 600;
         }
 
-        @media (max-width: 900px) {
+        @media (max-width: 1100px) {
+          .side-column {
+            width: 300px;
+            max-width: 300px;
+          }
+        }
+
+        @media (max-width: 950px) {
           .page-content {
             flex-direction: column;
           }
 
           .side-column {
             width: 100%;
+            max-width: 100%;
           }
 
           .day-card-section {
@@ -499,7 +514,7 @@ export default function LunarCalendarPage() {
           }
 
           .lunar-calendar-page {
-            padding: 5rem 1rem 1rem;
+            padding: 5rem 0.75rem 1rem;
           }
         }
       `}</style>
